@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin sinh viên</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin: 20px auto; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h2 { text-align: center; color: blue; }
+    </style>
+</head>
+<body>
+    <h2>CHI TIẾT THÔNG TIN SINH VIÊN</h2>
+    
+    <table>
+        <tr>
+            <th>MSSV</th>
+            <td th:text="${maSo}"></td>
+        </tr>
+        <tr>
+            <th>Họ và tên</th>
+            <td th:text="${tenSV}"></td>
+        </tr>
+        <tr>
+            <th>Năm sinh</th>
+            <td th:text="${namS}"></td>
+        </tr>
+        <tr>
+            <th>Giới tính</th>
+            <td th:text="${phai}"></td>
+        </tr>
+    </table>
+
+    <div style="text-align: center;">
+        <p>Dữ liệu này được truyền từ <b>Controller</b> sang <b>View</b></p>
+    </div>
+</body>
+</html>
