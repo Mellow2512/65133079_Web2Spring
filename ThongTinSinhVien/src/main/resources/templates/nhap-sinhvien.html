@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập thông tin sinh viên</title>
+    <style>
+        .form-container { width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center; color: green;">NHẬP THÔNG TIN</h2>
+        
+        <form action="/xu-ly-sv" method="post">
+            <div class="form-group">
+                <label>MSSV:</label>
+                <input type="text" name="mssv" required>
+            </div>
+            <div class="form-group">
+                <label>Họ và tên:</label>
+                <input type="text" name="hoTen" required>
+            </div>
+            <div class="form-group">
+                <label>Năm sinh:</label>
+                <input type="number" name="namSinh" required>
+            </div>
+            <div class="form-group">
+                <label>Giới tính:</label>
+                <input type="radio" name="gioiTinh" value="Nam" checked> Nam
+                <input type="radio" name="gioiTinh" value="Nữ"> Nữ
+            </div>
+            <div style="text-align: center;">
+                <button type="submit">Gửi thông tin</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
