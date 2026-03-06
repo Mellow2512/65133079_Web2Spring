@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách Sinh Viên</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h2 { color: #333; text-align: center; }
+        table { width: 80%; margin: 0 auto; border-collapse: collapse; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
+    </style>
+</head>
+<body>
+
+    <h2>Danh Sách Sinh Viên</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã SV</th>
+                <th>Họ và Tên</th>
+                <th>Điểm GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="sv, iterStat : ${danhSachSV}">
+                
+                <td th:text="${iterStat.count}"></td> 
+                
+                <td th:text="${sv.studentId}"></td>
+                <td th:text="${sv.fullName}"></td>
+                <td th:text="${sv.gpa}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
