@@ -79,6 +79,31 @@
             vertical-align: middle;
             font-size: 16px;
         }
+
+        .profile-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            border: 2px solid #333;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            text-align: left;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -89,29 +114,35 @@
                 <img src="https://ntu.edu.vn/Portals/0/logo%20ntu.png" alt="Logo NTU">
             </td>
             <td class="header-user">
-                [UserName]
+                [Nguyễn Phan Anh Tài]
             </td>
         </tr>
 
         <tr>
             <td class="sidebar">
                 <div class="menu-item bold">Dashboard</div>
-                <div class="menu-item">Topic - List</div>
-                <div class="menu-item">Topic - Addnew</div>
-                <div class="menu-spacer"></div>
-                <div class="menu-item">Student - List</div>
-                <div class="menu-item">Student - Addnew</div>
+                <div class="menu-item">Page - List</div>
+                <div class="menu-item">Page - Addnew</div>
+                <div class="menu-item">Post - List</div>
+                <div class="menu-item">Post - Addnew</div>
                 <div class="menu-spacer large"></div>
-            </td>
+            </td>	
             
             <td class="content-area">
-                Content
+                <div class="profile-card">
+                    <img th:src="@{/images/Avatar.jpg}" alt="Ảnh đại diện" class="profile-img">
+                    
+                    <div class="profile-info">
+                        <strong>Họ và tên:</strong> Nguyễn Phan Anh Tài<br>
+                        <strong>Mã sinh viên:</strong> 65133079
+                    </div>
+                </div>
             </td>
         </tr>
 
         <tr>
             <td colspan="2" class="footer">
-                ©2025 by Student Name – FIT.NTU
+                ©2025 by Nguyen Phan Anh Tai – FIT.NTU
             </td>
         </tr>
     </table>

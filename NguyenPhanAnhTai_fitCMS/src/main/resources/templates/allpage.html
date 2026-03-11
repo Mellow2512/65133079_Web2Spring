@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách Page</title>
+    <style>
+        body { 
+            font-family: 'Times New Roman', Times, serif; 
+            padding: 20px; 
+        }
+        h2 { 
+            color: #333; 
+        }
+        .btn-add {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 8px 15px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 10px; 
+        }
+        th, td { 
+            border: 1px solid black; 
+            padding: 8px 12px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #f2f2f2; 
+        }
+        .actions a { 
+            text-decoration: none; 
+            color: blue; 
+            margin-right: 10px; 
+        }
+        .actions a:hover { 
+            text-decoration: underline; 
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Page-List</h2>
+
+    <a th:href="@{/page/new}" class="btn-add">+ Add new Page</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Pagename</th>
+                <th>parentPageId</th>
+                <th>[view] [edit] [delete]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p : ${lstPages}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.pageName}"></td>
+                <td th:text="${p.parentPageId}"></td>
+                
+                <td class="actions">
+                    <a th:href="@{/page/view/{id}(id=${p.id})}">[view]</a>
+                    
+                    <a th:href="@{/page/edit/{id}(id=${p.id})}">[edit]</a>
+                    
+                    <a th:href="@{/page/delete/{id}(id=${p.id})}" 
+                       onclick="return confirm('Bạn có chắc chắn muốn xóa trang này không?');">[delete]</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
