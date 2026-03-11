@@ -3,6 +3,9 @@ package thiGK.ntu65133079.NguyenPhanAnhTai_fitCMS.models;
 public class Page {
 	private String id, pageName, keyword, content, parentPageId;
 	
+	public Page() {
+	}
+	
 	public Page(String id, String pageName, String keyword, String content, String parentPageId)
 	{
 		this.id = id;

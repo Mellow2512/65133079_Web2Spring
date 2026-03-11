@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết Page</title>
+    <style>
+        body { font-family: 'Times New Roman', Times, serif; padding: 20px; }
+        .detail-card { width: 500px; padding: 20px; border: 1px solid #007bff; border-radius: 5px; background-color: #f4f8ff; }
+        .detail-row { margin-bottom: 10px; font-size: 18px; }
+        .detail-row strong { display: inline-block; width: 150px; color: #333; }
+        .btn-back { display: inline-block; margin-top: 20px; padding: 10px 15px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Thông tin chi tiết Page</h2>
+
+    <div class="detail-card">
+        <div class="detail-row"><strong>ID:</strong> <span th:text="${page.id}"></span></div>
+        <div class="detail-row"><strong>Tên trang:</strong> <span th:text="${page.pageName}"></span></div>
+        <div class="detail-row"><strong>Từ khóa:</strong> <span th:text="${page.keyword}"></span></div>
+        <div class="detail-row"><strong>Nội dung:</strong> <span th:text="${page.content}"></span></div>
+        <div class="detail-row"><strong>Trang cha (Parent):</strong> <span th:text="${page.parentPageId}"></span></div>
+    </div>
+
+    <a th:href="@{/page/all}" class="btn-back">⬅ Quay lại danh sách</a>
+
+</body>
+</html>
