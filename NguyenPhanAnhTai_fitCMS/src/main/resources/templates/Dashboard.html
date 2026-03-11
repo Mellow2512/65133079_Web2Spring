@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard FIT NTU</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .layout-table {
+            width: 100%;
+            height: 100vh;
+            border-collapse: collapse;
+        }
+
+        .header-logo {
+            width: 250px;
+            height: 80px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .header-logo img {
+            max-width: 90%;
+            max-height: 60px;
+        }
+        .header-user {
+            border-bottom: 1px solid black;
+            text-align: right;
+            padding-right: 20px;
+            font-size: 18px;
+            vertical-align: top;
+            padding-top: 10px;
+        }
+
+        .sidebar {
+            width: 250px;
+            border-right: 1px solid black;
+            vertical-align: top;
+            padding-top: 20px;
+        }
+        
+        .menu-item {
+            border: 1px solid black;
+            border-left: none; 
+            padding: 5px 10px;
+            font-size: 18px;
+            margin-bottom: -1px; 
+        }
+        .menu-item.bold {
+            font-weight: bold;
+        }
+        .menu-spacer {
+            height: 20px;
+            border: 1px solid black;
+            border-left: none;
+            margin-bottom: -1px;
+        }
+        .menu-spacer.large {
+            height: 50px; 
+        }
+
+        .content-area {
+            background-color: #f2f2f2; 
+            text-align: center;
+            vertical-align: middle;
+            font-size: 18px;
+        }
+
+        .footer {
+            height: 30px;
+            border-top: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="layout-table">
+        <tr>
+            <td class="header-logo">
+                <img src="https://ntu.edu.vn/Portals/0/logo%20ntu.png" alt="Logo NTU">
+            </td>
+            <td class="header-user">
+                [UserName]
+            </td>
+        </tr>
+
+        <tr>
+            <td class="sidebar">
+                <div class="menu-item bold">Dashboard</div>
+                <div class="menu-item">Topic - List</div>
+                <div class="menu-item">Topic - Addnew</div>
+                <div class="menu-spacer"></div>
+                <div class="menu-item">Student - List</div>
+                <div class="menu-item">Student - Addnew</div>
+                <div class="menu-spacer large"></div>
+            </td>
+            
+            <td class="content-area">
+                Content
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer">
+                ©2025 by Student Name – FIT.NTU
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
